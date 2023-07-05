@@ -1,11 +1,17 @@
-job('Q1-Jon') {
-    scm{
-        git branch: 'main', url: 'https://github.com/AkshayDurgade/Jenkins.git'
+job('Assignment1') {
+    scm {
+        git {
+            branch('main')
+            remote {
+                url('https://github.com/AkshayDurgade/Jenkins.git')
+            }
+        }
     }
+
     steps {
         shell '''
-          javac StarPattern.java  
-          java StarPattern 
-          '''
+            javac Hello.java
+            java Hello
+        '''
     }
 }
