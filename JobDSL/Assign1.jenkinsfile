@@ -10,8 +10,8 @@ job('Assignment1') {
 
     steps {
         shell '''
-            javac Hello.java
-            java Hello
+            javac StarPattern.java
+            java StarPattern
         '''
     }
 }
