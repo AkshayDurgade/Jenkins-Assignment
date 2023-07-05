@@ -1,0 +1,9 @@
+job('Q1-Jon') {
+    scm{
+        git branch: 'main', url: 'https://github.com/AkshayDurgade/Jenkins.git'
+    }
+    steps {
+         bat 'javac StarPattern.java'  
+         bat 'java StarPattern' 
+    }
+}
