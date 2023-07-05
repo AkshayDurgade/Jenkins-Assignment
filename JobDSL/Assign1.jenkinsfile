@@ -3,7 +3,9 @@ job('Q1-Jon') {
         git branch: 'main', url: 'https://github.com/AkshayDurgade/Jenkins.git'
     }
     steps {
-         bat 'javac StarPattern.java'  
-         bat 'java StarPattern' 
+        shell '''
+          javac StarPattern.java  
+          java StarPattern 
+          '''
     }
 }
